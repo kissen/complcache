@@ -2,9 +2,9 @@ package complcache
 
 import (
 	"errors"
-	"net/http"
-	"io/ioutil"
 	"fmt"
+	"io/ioutil"
+	"net/http"
 	"sync"
 	"testing"
 	"time"
@@ -195,7 +195,7 @@ func TestReadme(t *testing.T) {
 
 	cache, err := New(expiration, fill, gc)
 	if err != nil {
-		panic(err)  // New returns errors on bad arguments
+		panic(err) // New returns errors on bad arguments
 	}
 
 	// While you can just Get a value for a given key, it's best
@@ -222,6 +222,6 @@ func TestReadme(t *testing.T) {
 	doSomethingWith(entry, err)
 }
 
-func doSomethingWith(x... interface{}) {
+func doSomethingWith(x ...interface{}) {
 	// do nothing actually :)
 }
