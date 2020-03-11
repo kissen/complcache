@@ -107,11 +107,11 @@ func New(expiration, fill, gc time.Duration) (Cache, error) {
 	}
 
 	if fill <= 0 {
-		return nil, fmt.Errorf("invalid argument fill=%v", expiration)
+		return nil, fmt.Errorf("invalid argument fill=%v", fill)
 	}
 
 	if gc <= 0 {
-		return nil, fmt.Errorf("invalid argument gc=%v", expiration)
+		return nil, fmt.Errorf("invalid argument gc=%v", gc)
 	}
 
 	// create cache
